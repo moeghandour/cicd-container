@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       - docker push 567921641031.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest
-      - printf '[{"name":"mytask","imageUri":"%s"}]' 567921641031.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest > imagedefinitions.json
+      - printf '[{"name":"mycontainer","imageUri":"%s"}]' 567921641031.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
